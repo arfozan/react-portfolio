@@ -1,7 +1,8 @@
 import { motion } from "framer-motion"
 import PhoneMockup from "../components/PhoneMockup"
-import { useEffect } from "react"
+import { useState } from "react"
 import bidddingImg from "../assets/fpl/bidding.png"
+import Architecture from "../components/Architecture"
 
 export default function FantasyLeague() {
   const features = [
@@ -10,6 +11,12 @@ export default function FantasyLeague() {
       title: "Player Bidding System",
       desc: "Unlike the traditional Fantasy Premier League Draft where players are selected using a snake draft system, this league introduces a competitive bidding system. Managers bid for players using their allocated budget. If someone bids, the timer resets (for example 24 hours), ensuring fair competition for every signing.",
       img: bidddingImg
+    },
+
+    {
+      title: "Match Prediction Game",
+      desc: "Managers can predict the result of every Premier League match inside the app. Correct predictions reward bonus credits that can be used in the transfer market or league finances. This adds an extra competitive layer where football knowledge can give managers a financial advantage.",
+      // img: "/images/fpl/prediction.png"
     },
 
     {
@@ -67,6 +74,20 @@ export default function FantasyLeague() {
     }
 
   ]
+
+  const [copied, setCopied] = useState(false)
+
+function copyCredentials() {
+  const text = `Username: user1 - user9
+  Password: Test123`
+
+    navigator.clipboard.writeText(text)
+    setCopied(true)
+
+    setTimeout(() => {
+      setCopied(false)
+    }, 2000)
+  }
 
   return (
 
@@ -142,7 +163,8 @@ export default function FantasyLeague() {
         })}
 
       </div>
-
+      
+      <Architecture />
 
       {/* WORKFLOW */}
 
@@ -190,6 +212,58 @@ export default function FantasyLeague() {
 
       </section>
 
+      {/* TEST ACCOUNTS */}
+
+      <section className="mt-32 text-center">
+
+        <h2 className="text-3xl font-semibold mb-6">
+          Test the App
+        </h2>
+
+        <p className="text-gray-400 max-w-2xl mx-auto mb-10">
+          Download the demo version of the application connected to a
+          testing server with sample teams, players, and transfers.
+          Use the credentials below to explore the features.
+        </p>
+
+        <div className="max-w-md mx-auto p-6 rounded-xl
+        bg-white/5 border border-white/10">
+
+          <h3 className="text-lg font-semibold mb-4">
+            Demo Login Credentials
+          </h3>
+
+          <p className="text-gray-400 mb-2">
+            Username: <span className="text-white">user1 – user9</span>
+          </p>
+
+          <p className="text-gray-400 mb-4">
+            Password: <span className="text-white">Test123</span>
+          </p>
+
+          <button
+            onClick={copyCredentials}
+            className="mb-6 px-4 py-2 rounded-lg
+            bg-blue-600 hover:bg-blue-500
+            transition text-sm font-semibold"
+          >
+            {copied ? "Copied!" : "Copy Credentials"}
+          </button>
+
+          <div>
+            <a
+              href="https://github.com/arfozan/cutom-fpl-apk/releases/download/v1.0.0/FPL.apk"
+              className="inline-block px-6 py-3 rounded-lg
+              bg-blue-600 hover:bg-blue-500
+              transition font-semibold"
+            >
+              Download APK
+            </a>
+          </div>
+
+        </div>
+
+      </section>
 
       {/* FUTURE DEVELOPMENT */}
 
@@ -211,16 +285,6 @@ export default function FantasyLeague() {
         {/* Buttons */}
 
         <div className="flex justify-center gap-6">
-
-          <a
-            href="https://github.com/arfozan/cutom-fpl-apk/releases/download/v1.0.0/FPL.apk"
-            className="px-6 py-3 rounded-lg
-            bg-blue-600 hover:bg-blue-500
-            transition font-semibold"
-          >
-            Download APK
-          </a>
-
           <a
             href="https://github.com/arfozan/fpl-front-end"
             className="px-6 py-3 rounded-lg
@@ -228,7 +292,17 @@ export default function FantasyLeague() {
             hover:border-blue-500
             transition"
           >
-            GitHub Repository
+            GitHub Repository (Frontend)
+          </a>
+
+          <a
+            href="https://github.com/arfozan/fpl-backend"
+            className="px-6 py-3 rounded-lg
+            border border-white/20
+            hover:border-blue-500
+            transition"
+          >
+            GitHub Repository (Backend)
           </a>
 
         </div>
