@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import PhoneMockup from "../components/PhoneMockup"
 import { useEffect } from "react"
+import bidddingImg from "../assets/fpl/bidding.png"
 
 export default function FantasyLeague() {
   const features = [
@@ -8,7 +9,7 @@ export default function FantasyLeague() {
     {
       title: "Player Bidding System",
       desc: "Unlike the traditional Fantasy Premier League Draft where players are selected using a snake draft system, this league introduces a competitive bidding system. Managers bid for players using their allocated budget. If someone bids, the timer resets (for example 24 hours), ensuring fair competition for every signing.",
-      img: "/src/assets/fpl/bidding.png"
+      img: bidddingImg
     },
 
     {
