@@ -29,12 +29,13 @@ function App() {
   return (
     <div className="bg-gray-950 text-white min-h-screen">
       <Navbar />
-
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects/fantasy-league" element={<FantasyLeague />} />
-        <Route path="/projects/hospital-app" element={<HospitalApp />} />
-        <Route path="/projects/echo-drift" element={<EchoDrift />} />
+        
+          <Route path="/" element={<Home />} />
+          <Route path="/projects/fantasy-league" element={<FantasyLeague />} />
+          <Route path="/projects/hospital-app" element={<HospitalApp />} />
+          <Route path="/projects/echo-drift" element={<EchoDrift />} />
+        
       </Routes>
 
       <Footer />
