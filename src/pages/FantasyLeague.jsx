@@ -2,6 +2,10 @@ import { motion } from "framer-motion"
 import PhoneMockup from "../components/PhoneMockup"
 import { useState } from "react"
 import bidddingImg from "../assets/fpl/bidding.png"
+import predictionImg from "../assets/fpl/prediction.png"
+import transferImg from "../assets/fpl/transfer.png"
+import wageImg from "../assets/fpl/wage.png"
+import contractImg from "../assets/fpl/contract.png"
 import Architecture from "../components/Architecture"
 
 export default function FantasyLeague() {
@@ -16,13 +20,13 @@ export default function FantasyLeague() {
     {
       title: "Match Prediction Game",
       desc: "Managers can predict the result of every Premier League match inside the app. Correct predictions reward bonus credits that can be used in the transfer market or league finances. This adds an extra competitive layer where football knowledge can give managers a financial advantage.",
-      // img: "/images/fpl/prediction.png"
+      img: predictionImg
     },
 
     {
       title: "Player Wage System",
       desc: "Each player receives a weekly wage based on their base price in Fantasy Premier League. The formula is basePrice³ / 2000 per gameweek for main team players. Academy players have reduced wages (divided by 6000). Managers must manage their finances carefully as wages are deducted automatically every gameweek.",
-      // img: "/images/fpl/wage.png"
+      img: wageImg
     },
 
     {
@@ -34,13 +38,13 @@ export default function FantasyLeague() {
     {
       title: "Player Contracts",
       desc: "Managers must sign contracts with players similar to real football clubs. Every time a contract is renewed the player's base price increases by 0.5 which also increases their wage. If the contract expires the player becomes a free agent and leaves the team.",
-      // img: "/images/fpl/contract.png"
+      img: contractImg
     },
 
     {
       title: "Realistic Transfer System",
       desc: "Managers can trade players between teams permanently or via loan deals. Loan duration is tracked using gameweeks and players automatically return to their parent club after the loan ends.",
-      // img: "/images/fpl/transfer.png"
+      img: transferImg
     }
 
   ]
@@ -74,20 +78,6 @@ export default function FantasyLeague() {
     }
 
   ]
-
-  const [copied, setCopied] = useState(false)
-
-function copyCredentials() {
-  const text = `Username: user1 - user9
-  Password: Test123`
-
-    navigator.clipboard.writeText(text)
-    setCopied(true)
-
-    setTimeout(() => {
-      setCopied(false)
-    }, 2000)
-  }
 
   return (
 
@@ -163,8 +153,6 @@ function copyCredentials() {
         })}
 
       </div>
-      
-      <Architecture />
 
       {/* WORKFLOW */}
 
@@ -241,15 +229,6 @@ function copyCredentials() {
             Password: <span className="text-white">Test123</span>
           </p>
 
-          <button
-            onClick={copyCredentials}
-            className="mb-6 px-4 py-2 rounded-lg
-            bg-blue-600 hover:bg-blue-500
-            transition text-sm font-semibold"
-          >
-            {copied ? "Copied!" : "Copy Credentials"}
-          </button>
-
           <div>
             <a
               href="https://github.com/arfozan/cutom-fpl-apk/releases/download/v1.0.0/FPL.apk"
@@ -264,6 +243,8 @@ function copyCredentials() {
         </div>
 
       </section>
+
+      <Architecture />
 
       {/* FUTURE DEVELOPMENT */}
 
@@ -292,7 +273,7 @@ function copyCredentials() {
             hover:border-blue-500
             transition"
           >
-            GitHub Repository (Frontend)
+            GitHub Repo (Frontend)
           </a>
 
           <a
@@ -302,7 +283,7 @@ function copyCredentials() {
             hover:border-blue-500
             transition"
           >
-            GitHub Repository (Backend)
+            GitHub Repo (Backend)
           </a>
 
         </div>
