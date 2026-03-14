@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import PhoneMockup from "../components/PhoneMockup"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import bidddingImg from "../assets/fpl/bidding.png"
 import predictionImg from "../assets/fpl/prediction.png"
 import transferImg from "../assets/fpl/transfer.png"
@@ -9,6 +10,7 @@ import contractImg from "../assets/fpl/contract.png"
 import Architecture from "../components/Architecture"
 
 export default function FantasyLeague() {
+
   const features = [
 
     {
@@ -81,7 +83,7 @@ export default function FantasyLeague() {
 
   return (
 
-    <div className="max-w-6xl mx-auto px-6 py-20">
+    <div className="max-w-6xl mx-auto px-6 pt-32 pb-20">
 
       {/* HEADER */}
 

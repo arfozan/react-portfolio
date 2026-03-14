@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function EchoDrift() {
   return (
     <section className="py-20 max-w-5xl mx-auto px-6">

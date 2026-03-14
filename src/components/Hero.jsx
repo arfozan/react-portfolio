@@ -4,13 +4,29 @@ import profile from "../assets/me.png"
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center">
+    <section className="min-h-screen relative flex items-center px-6">
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
+      {/* Animated background glow */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+
+        <motion.div
+          animate={{ x: [0, 40, -40, 0], y: [0, -30, 30, 0] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] top-[-100px] left-[10%]"
+        />
+
+        <motion.div
+          animate={{ x: [0, -50, 50, 0], y: [0, 40, -40, 0] }}
+          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute w-[400px] h-[400px] bg-cyan-400/10 rounded-full blur-[120px] bottom-[-100px] right-[10%]"
+        />
+
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT SIDE TEXT */}
         <div>
-
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -71,27 +87,14 @@ export default function Hero() {
             transition={{ delay: 1.2 }}
             className="flex gap-6 text-2xl"
           >
-
-            <a
-              href="https://github.com/"
-              target="_blank"
-              className="hover:text-blue-400 transition"
-            >
+            <a href="https://github.com/" target="_blank" className="hover:text-blue-400 transition">
               <FaGithub />
             </a>
-
-            <a
-              href="https://linkedin.com/"
-              target="_blank"
-              className="hover:text-blue-400 transition"
-            >
+            <a href="https://linkedin.com/" target="_blank" className="hover:text-blue-400 transition">
               <FaLinkedin />
             </a>
-
           </motion.div>
-
         </div>
-
 
         {/* RIGHT SIDE IMAGE */}
         <motion.div
@@ -99,17 +102,14 @@ export default function Hero() {
           transition={{ duration: 4, repeat: Infinity }}
           className="flex justify-center"
         >
-
           <img
             src={profile}
             alt="profile"
             className="w-72 h-72 object-cover rounded-full border-4 border-blue-500 shadow-[0_0_40px_rgba(59,130,246,0.6)]"
           />
-
         </motion.div>
 
       </div>
-
     </section>
   )
 }
