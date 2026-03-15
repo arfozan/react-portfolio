@@ -12,7 +12,7 @@ export const projects = [
 
   {
     title: "Hospital Management System",
-    slug: "hospital-management",
+    slug: "hospital-app",
     description:
       "A full-stack hospital management platform built with React and Django for handling patient records, appointments, and administration.",
     tech: ["React", "Django", "PostgreSQL"],

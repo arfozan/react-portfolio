@@ -1,29 +1,33 @@
 import { motion } from "framer-motion"
 
 const experience = [
-  {
-    year: "2017 - Present",
-    title: "Unreal Engine Developer",
-    description:
-      "8+ years developing games and interactive environments using Unreal Engine (UE4/UE5), working with Blueprint systems, level design, and real-time rendering.",
-  },
-  {
-    year: "2021 - Present",
-    title: "Django Backend Developer",
-    description:
-      "Building scalable backend systems, REST APIs, authentication systems, and database architecture using Django and PostgreSQL.",
-  },
+  
   {
     year: "2023 - Present",
-    title: "React Frontend Developer",
+    title: "React Native Developer",
     description:
       "Developing responsive and dynamic user interfaces using React, modern JavaScript, and component-based architecture.",
   },
+  
   {
     year: "2021 - Present",
-    title: "Database Development",
+    title: "Database Management Systems (PostgreSQL & MySQL)",
     description:
-      "Designing and managing relational databases using PostgreSQL for scalable applications and efficient data management.",
+      "Designing and managing relational databases using PostgreSQL and MySQL for scalable applications and efficient data management.",
+  },
+
+  {
+    year: "2021 - Present",
+    title: "Django Developer",
+    description:
+      "Building scalable backend systems, REST APIs, authentication systems, and database architecture using Django and PostgreSQL.",
+  },
+
+  {
+    year: "2017 - Present",
+    title: "Game Development (Unreal Engine 4/5)",
+    description:
+      "8+ years developing games and interactive environments using Unreal Engine (UE4/UE5), working with Blueprint systems, level design, and real-time rendering.",
   },
 ]
 

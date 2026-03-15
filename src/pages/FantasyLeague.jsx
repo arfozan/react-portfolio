@@ -8,6 +8,7 @@ import transferImg from "../assets/fpl/transfer.png"
 import wageImg from "../assets/fpl/wage.png"
 import contractImg from "../assets/fpl/contract.png"
 import Architecture from "../components/Architecture"
+import academyImg from "../assets/fpl/academy.png"
 
 export default function FantasyLeague() {
 
@@ -34,7 +35,7 @@ export default function FantasyLeague() {
     {
       title: "Academy Players",
       desc: "Academy players are cheaper alternatives with significantly reduced wages. However they cannot be used in the main squad until promoted to the senior team. This encourages long-term squad planning and youth development strategies.",
-      // img: "/images/fpl/academy.png"
+      img: academyImg
     },
 
     {
@@ -228,7 +229,7 @@ export default function FantasyLeague() {
           </p>
 
           <p className="text-gray-400 mb-4">
-            Password: <span className="text-white">Test123</span>
+            Password: <span className="text-white">Test@123</span>
           </p>
 
           <div>

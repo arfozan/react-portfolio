@@ -37,7 +37,7 @@ export default function About() {
         >
           I have <span className="text-white font-semibold">4+ years of experience with Django</span>,
           <span className="text-white font-semibold"> 2+ years with React</span>, and
-          <span className="text-white font-semibold"> 4+ years working with PostgreSQL</span>
+          <span className="text-white font-semibold"> 4+ years working with PostgreSQL </span>
           building modern APIs and responsive web applications.
         </motion.p>
 
@@ -48,8 +48,8 @@ export default function About() {
           viewport={{ once: true }}
           className="text-gray-400 leading-relaxed max-w-3xl mx-auto"
         >
-          Alongside web development, I have
-          <span className="text-white font-semibold"> 8+ years of experience with Unreal Engine (UE4/UE5)</span>,
+          Alongside web development, I have <span className="text-white font-semibold"> 
+          8+ years of experience with Unreal Engine (UE4/UE5)</span>,
           creating games, interactive environments, and real-time experiences.
           I also build mobile applications using React Native.
         </motion.p>

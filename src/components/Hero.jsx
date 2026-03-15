@@ -42,7 +42,8 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="text-xl md:text-2xl text-blue-400 mb-4"
           >
-            Full Stack Developer • Game Developer • Mobile App Developer
+            Full Stack Developer • Mobile App Developer • Systems Enthusiast
+            {/* Game Developer */}
           </motion.h2>
 
           <motion.p
@@ -51,7 +52,7 @@ export default function Hero() {
             transition={{ delay: 0.6 }}
             className="text-gray-400 leading-relaxed mb-6 max-w-xl"
           >
-            I build modern web applications using <span className="text-white">React</span> 
+            I build modern web applications using <span className="text-white">React </span>  
             and <span className="text-white">Django</span>, develop mobile apps with 
             <span className="text-white"> React Native (Expo)</span>, and create 
             interactive experiences using <span className="text-white">Unreal Engine 5</span>.  

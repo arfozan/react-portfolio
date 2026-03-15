@@ -69,7 +69,7 @@ export default function Navbar() {
           to="/"
           className="text-xl font-bold text-blue-400"
         >
-          DevPortfolio
+          AR Fozan
         </Link>
 
 
@@ -93,10 +93,6 @@ export default function Navbar() {
             <Link to="/" className="hover:text-blue-400">
               Home
             </Link>
-
-            <a href="/#projects" className="hover:text-blue-400">
-              All Projects
-            </a>
 
           </div>
 
@@ -136,10 +132,6 @@ export default function Navbar() {
               <Link to="/" onClick={()=>setMenuOpen(false)}>
                 Home
               </Link>
-
-              <a href="/#projects" onClick={()=>setMenuOpen(false)}>
-                All Projects
-              </a>
             </>
 
           )}
